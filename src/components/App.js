@@ -4,7 +4,11 @@ import './../styles/App.css';
 
 const App = () => {
 
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState([
+    {"name": "Item 1", "price":10},
+    {"name": "Item 2", "price":20},
+    {"name": "Item 3", "price":30},
+  ]);
 
   const handleRemoveItem = (itemName) => {
     const updatedCartItems = cartItems.filter((item) => item.name !== itemName);
@@ -49,7 +53,7 @@ const ChildComponent = ({ cartItems, handleRemoveItem }) => {
       <>
         {cartItems.map((item, index) => (
           <li key={index}>
-            <span id="itemName">{item.name}</span>&nbsp;&nbsp;
+            <span id="itemName">{item.name}</span>&nbsp; - &nbsp;
             <span id="itemPrice">${item.price}</span>
             <button onClick={() => handleRemoveItem(item.name)}>Remove</button>
           </li>
