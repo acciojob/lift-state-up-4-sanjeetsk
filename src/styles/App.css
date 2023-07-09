@@ -1,1 +1,18 @@
 
+
+.parent{
+    margin: 20px;
+    padding: 40px;
+    background-color: lightgreen;
+}
+.child{
+    background-color: yellow;
+}
+
+.child2{
+    background-color: red;
+}
+
+h1,h2,h3{
+    margin-bottom: 20px;
+}
